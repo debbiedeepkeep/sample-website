@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #f9faf9;
+      color: #3a3a3a;
+    }
+    .card {
+      text-align: center;
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 48px 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    h1 { color: #2c3e50; margin-bottom: 8px; }
+    p { color: #777; margin-bottom: 24px; }
+    a {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #6b8f71;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    a:hover { background: #557a5b; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>File Download</h1>
+    <p>Click below to download the text file.</p>
+    <a href="randomtext.txt" download>Download randomtext.txt</a>
+  </div>
+</body>
+</html>
