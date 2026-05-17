@@ -68,26 +68,75 @@ h2 {
   color: #fff;
 }
 
-/* ===== Banner ===== */
-.banner {
+/* ===== Banner Popup ===== */
+.banner-overlay {
   position: fixed;
-  top: 64px;
+  top: 0;
+  left: 0;
   width: 100%;
-  background: #2c3e50;
-  color: #fff;
-  text-align: center;
-  padding: 12px 20px;
-  font-size: 0.9rem;
-  z-index: 999;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
 }
 
-.banner a {
-  color: #a8d5a2;
+.banner-popup {
+  background: #fff;
+  color: #3a3a3a;
+  border-radius: 12px;
+  padding: 40px 48px;
+  max-width: 540px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  animation: bannerFadeIn 0.3s ease;
+}
+
+@keyframes bannerFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.banner-popup h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+.banner-popup p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.banner-popup a {
+  color: #6b8f71;
+  font-weight: 600;
   text-decoration: underline;
 }
 
-.banner a:hover {
-  color: #fff;
+.banner-popup a:hover {
+  color: #3e5f45;
+}
+
+.banner-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.banner-close:hover {
+  color: #333;
 }
 
 /* ===== Navbar ===== */

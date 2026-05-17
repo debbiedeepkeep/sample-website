@@ -22,12 +22,22 @@
     </div>
   </nav>
 
-  <!-- Banner -->
-  <div class="banner">
-    <div class="container">
-      To further understand the style of this website it's advisable to download the style and other useful information under <a href="http://localhost:8000/useful/">http://localhost:8000/useful/</a>
+  <!-- Banner Popup -->
+  <div class="banner-overlay" id="bannerOverlay">
+    <div class="banner-popup">
+      <button class="banner-close" id="bannerClose">&times;</button>
+      <h3>Welcome!</h3>
+      <p>To further understand the style of this website it's advisable to download the style and other useful information under <a href="http://localhost:8000/useful/">http://localhost:8000/useful/</a></p>
     </div>
   </div>
+  <script>
+    document.getElementById('bannerClose').addEventListener('click', function() {
+      document.getElementById('bannerOverlay').style.display = 'none';
+    });
+    document.getElementById('bannerOverlay').addEventListener('click', function(e) {
+      if (e.target === this) this.style.display = 'none';
+    });
+  </script>
 
   <!-- Hero Section -->
   <header class="hero">
